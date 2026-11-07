@@ -1,14 +1,51 @@
-*.tar
-*.tar.*
-*.jar
-*.exe
-*.msi
-*.deb
-*.zip
-*.tgz
-*.log
-*.log.*
-*.sig
+# Raw sequencing data
+data/fastq/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
 
-pkg/
-src/
+# Expression data and metadata
+data/expression/
+data/metadata/
+data/cytometry/
+
+# Analysis results
+results/
+logs/
+
+# Large reference files
+resources/reference/*.idx
+resources/reference/*.fa
+resources/reference/*.fasta
+resources/reference/*.gtf
+resources/reference/*.gz
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Conda environments
+.conda/
+
+# Snakemake working directory
+.snakemake/
+
+# Real sample metadata
+config/samples.tsv
+config/clinical.tsv
+
+# Local reference configuration
+config/config.local.yaml
