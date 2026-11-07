@@ -1,0 +1,34 @@
+
+# General project settings
+project:
+  name: "TME_analysis"
+  input_mode: "fastq"  # fastq or tpm
+
+# Input files
+samples: "config/samples.tsv"
+
+fastq:
+  directory: "data/fastq"
+
+expression:
+  matrix: "data/expression/expression_matrix.tsv"
+
+# Reference files for RNA-seq quantification
+reference:
+  kallisto_index: "resources/reference/transcriptome.idx"
+  tx2gene: "resources/reference/tx2gene.tsv"
+
+# Quality control
+qc:
+  run_fastqc: true
+  run_multiqc: true
+
+# Computational resources
+resources:
+  fastqc_threads: 4
+  kallisto_threads: 8
+
+# Output directories
+output:
+  directory: "results"
+  logs: "logs"
